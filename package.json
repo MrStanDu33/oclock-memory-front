@@ -1,0 +1,36 @@
+{
+  "name": "oclock-memory-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js --ignore-pattern node_modules/",
+    "sass": "sass ./src/scss/main.scss:./public/css/style.css",
+    "sass:watch": "sass ./src/scss/main.scss:./public/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrStanDu33/oclock-memory-front.git"
+  },
+  "author": "DANIELS-ROTH Stan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/MrStanDu33/oclock-memory-front/issues"
+  },
+  "homepage": "https://github.com/MrStanDu33/oclock-memory-front#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.21.0",
+    "stylelint-webpack-plugin": "^3.0.1"
+  }
+}
