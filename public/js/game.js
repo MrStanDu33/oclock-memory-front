@@ -13,7 +13,11 @@
     .filter((game) => game.status)
     .forEach((game) => {
       const li = document.createElement('li');
-      li.innerHTML = `<span class="bold">${game.User.username}</span> - <span class="time">${game.timeLeft}s</span>`;
+      li.classList.add('flex', 'row', 'nowrap', 'yCenter');
+      li.innerHTML = `
+        <img alt="${game.User.username}'s avatar" class="avatar" src="${game.User.avatar}" />
+        <span class="bold">${game.User.username} - </span>
+        <span class="time">${game.timeLeft}s</span>`;
       leaderBoardContainer.appendChild(li);
     });
   const game = new Game(gameContainer, timeContainer);
