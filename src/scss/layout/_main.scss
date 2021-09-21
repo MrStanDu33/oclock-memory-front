@@ -1,6 +1,6 @@
 main {
   &.logScreen {
-    &:before {
+    &::before {
       content: '';
       display: block;
       height: 100%;
@@ -10,7 +10,7 @@ main {
       order: 1;
       margin: 0 75px;
     }
-    &:after {
+    &::after {
       content: 'ou';
       display: block;
       height: 75px;
@@ -31,6 +31,7 @@ main {
       &#registerForm {
         display: none;
       }
+
       background-color: #fff;
       border-radius: 5px;
       box-shadow: 2.3px 2.3px 1.9px rgba(0, 0, 0, 0.005),
