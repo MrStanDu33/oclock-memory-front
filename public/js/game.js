@@ -1,7 +1,7 @@
 (async () => {
   const gameContainer = document.querySelector('table.game');
   const timeContainer = document.querySelector('aside.timer');
-  const rawResponse = await fetch('http://localhost:3000/api/v1/game/', {
+  const rawResponse = await fetch(`${API_URL}/game/`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${localStorage.getItem('accessToken')}`,

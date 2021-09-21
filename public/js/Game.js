@@ -4,7 +4,7 @@ class Game {
   }
 
   async boot(gameContainer, timerContainer) {
-    const rawResponse = await fetch('http://localhost:3000/api/v1/game/', {
+    const rawResponse = await fetch(`${API_URL}/game/`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -14,7 +14,7 @@ class Game {
     this.gameId = response.id;
     this.gameContainer = gameContainer;
     this.timerContainer = timerContainer;
-    this.timeLeft = 120;
+    this.timeLeft = MAX_GAME_DURATION;
     this.map = new Map();
     this.printMap();
     this.setTimer();
@@ -23,7 +23,7 @@ class Game {
 
   refreshTimer() {
     const timerEl = this.timerContainer.querySelector('div.time');
-    timerEl.style.height = `${(100 * this.timeLeft) / 120}%`;
+    timerEl.style.height = `${(100 * this.timeLeft) / MAX_GAME_DURATION}%`;
   }
 
   setTimer() {
@@ -34,7 +34,7 @@ class Game {
         window.clearInterval(this.timerInterval);
       }
       if (this.isTimeOver()) {
-        await fetch(`http://localhost:3000/api/v1/game/${this.gameId}`, {
+        await fetch(`${API_URL}/game/${this.gameId}`, {
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -53,7 +53,7 @@ class Game {
         }
       }
       if (this.isGameFinished()) {
-        await fetch(`http://localhost:3000/api/v1/game/${this.gameId}`, {
+        await fetch(`${API_URL}/game/${this.gameId}`, {
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${localStorage.getItem('accessToken')}`,

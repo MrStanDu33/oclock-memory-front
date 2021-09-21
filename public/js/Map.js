@@ -15,15 +15,15 @@ class Map {
   }
 
   static getRandomPos() {
-    const y = Math.floor(Math.random() * (3 - 0 + 1) + 0);
-    const x = Math.floor(Math.random() * (6 - 0 + 1) + 0);
+    const y = Math.floor(Math.random() * (GAME_ROWS - 1 - 0 + 1) + 0);
+    const x = Math.floor(Math.random() * (GAME_COLS - 1 - 0 + 1) + 0);
     return { x, y };
   }
 
   getAvailableRandomPos(runs = 0) {
     const pos = Map.getRandomPos();
     if (this.map[pos.y][pos.x].icon) {
-      if (runs >= 7 * 4 * 5) {
+      if (runs >= (GAME_COLS - 1) * (GAME_ROWS - 1) * 5) {
         throw new Error('No more cell can be found');
       }
       return this.getAvailableRandomPos(runs + 1);
@@ -33,9 +33,9 @@ class Map {
 
   buildMap() {
     this.map = [];
-    for (let y = 0; y < 4; y += 1) {
+    for (let y = 0; y < GAME_ROWS; y += 1) {
       this.map.push([]);
-      for (let x = 0; x < 7; x += 1) {
+      for (let x = 0; x < GAME_COLS; x += 1) {
         this.map[y].push(
           new Card({
             pos: { x, y },
