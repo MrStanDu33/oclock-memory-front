@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/index.js" defer></script>
+    <title>MemoGame</title>
+  </head>
+  <body>
+    <main class="logScreen flex row xCenter yCenter">
+      <form id="loginForm" class="loginForm flex column xCenter ySpaceBetween">
+        <img
+          src="https://img.icons8.com/ios-filled/100/000000/gender-neutral-user.png"
+          alt="Login form icon"
+          class="loginIcon"
+        />
+        <h1>Connectez-vous</h1>
+        <div class="inputContainer flex column xStretch ySpaceBetween">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="exemple@mail.fr" />
+        </div>
+        <div class="inputContainer flex column xStretch ySpaceBetween">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="●●●●●●●●" />
+        </div>
+        <button class="primary submit textCenter pointer">Se connecter</button>
+        <button class="toggleSignup">
+          Pas de compte ?
+          <span class="switchToRegister accent pointer">Créer un compte !</span>
+        </button>
+      </form>
+      <form
+        id="registerForm"
+        class="loginForm flex column xCenter ySpaceBetween"
+      >
+        <img
+          src="https://img.icons8.com/ios-filled/100/000000/gender-neutral-user.png"
+          alt="Login form icon"
+          class="loginIcon"
+        />
+        <h1>Créez un compte</h1>
+        <div class="inputContainer flex column xStretch ySpaceBetween">
+          <label for="firstName">Prénom</label>
+          <input id="firstName" type="text" placeholder="Jean" />
+        </div>
+        <div class="inputContainer flex column xStretch ySpaceBetween">
+          <label for="lastName">Nom</label>
+          <input id="lastName" type="text" placeholder="Dupont" />
+        </div>
+        <div class="inputContainer flex column xStretch ySpaceBetween">
+          <label for="username">Identidiant</label>
+          <input id="username" type="text" placeholder="JeanDupont013" />
+        </div>
+        <div class="inputContainer flex column xStretch ySpaceBetween">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="jean.dupont@email.fr" />
+        </div>
+        <div class="inputContainer flex column xStretch ySpaceBetween">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="●●●●●●●●" />
+        </div>
+        <button class="primary submit textCenter pointer">S'enregister</button>
+        <button class="toggleLogin">
+          Déjà un compte ?
+          <span class="accent pointer">Se connecter !</span>
+        </button>
+      </form>
+      <button class="primary signAsGuest textCenter pointer">
+        Continuer sans compte
+      </button>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #e4e4e4;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.1s linear;
+}
+
+img[alt=""],
+img:not([alt]) {
+  border: 5px dashed #cc0000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+** 	____                      _
+** |  _ \                    | |
+** | |_) |_ __ __ _ _ __   __| |
+** |  _ <| '__/ _` | '_ \ / _` |
+** | |_) | | | (_| | | | | (_| |
+** |____/|_|  \__,_|_| |_|\__,_|
+*/
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.helper {
+  cursor: help;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.tohide {
+  display: none;
+}
+
+.marginCenter {
+  margin: 0 auto;
+}
+
+.marginLeft {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.marginRight {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
+.flex.noWrap {
+  flex-wrap: nowrap;
+}
+
+.flex.row.xCenter {
+  justify-content: center;
+}
+
+.flex.row.xSpaceBetween {
+  justify-content: space-between;
+}
+
+.flex.row.xSpaceAround {
+  justify-content: space-around;
+}
+
+.flex.row.xSpaceEvenly {
+  justify-content: space-evenly;
+}
+
+.flex.row.yCenter {
+  align-items: center;
+}
+
+.flex.row.yStretch {
+  align-items: stretch;
+}
+
+.flex.row.ySpaceAround {
+  align-items: space-around;
+}
+
+.flex.column.xCenter {
+  align-items: center;
+}
+
+.flex.column.xSpaceBetween {
+  align-items: space-between;
+}
+
+.flex.column.xSpaceAround {
+  align-items: space-around;
+}
+
+.flex.column.yCenter {
+  justify-content: center;
+}
+
+.flex.column.yStretch {
+  justify-content: stretch;
+}
+
+.flex.column.ySpaceBetween {
+  justify-content: space-between;
+}
+
+.flex.column.ySpaceAround {
+  justify-content: space-around;
+}
+
+.flex.column.ySpaceEvenly {
+  justify-content: space-evenly;
+}
+
+.grid {
+  display: grid;
+}
+
+.inline {
+  display: inline-block;
+}
+
+main.logScreen:before {
+  content: "";
+  display: block;
+  height: 100%;
+  max-height: 600px;
+  width: 2px;
+  background-color: #bbb;
+  order: 1;
+  margin: 0 75px;
+}
+main.logScreen:after {
+  content: "ou";
+  display: block;
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  border: 2px solid #bbb;
+  transform: translate(-50%, -50%);
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: 75px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+main.logScreen form.loginForm {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2.3px 2.3px 1.9px rgba(0, 0, 0, 0.005), 5.4px 5.4px 4.3px rgba(0, 0, 0, 0.007), 9.7px 9.7px 7.7px rgba(0, 0, 0, 0.009), 16.1px 16.1px 12.8px rgba(0, 0, 0, 0.011), 26.5px 26.5px 21.2px rgba(0, 0, 0, 0.013), 46.2px 46.2px 37px rgba(0, 0, 0, 0.015), 100px 100px 80px rgba(0, 0, 0, 0.02);
+  position: relative;
+  padding: 50px;
+  width: 350px;
+  box-sizing: content-box;
+  order: 0;
+}
+main.logScreen form.loginForm#registerForm {
+  display: none;
+}
+main.logScreen form.loginForm img.loginIcon {
+  height: 100px;
+  width: 100px;
+  box-sizing: content-box;
+  border-radius: 50%;
+  border: 2px solid #030303;
+  padding: 20px;
+}
+main.logScreen form.loginForm button.submit {
+  margin-bottom: 30px;
+}
+main.logScreen form.loginForm button.toggleSignup,
+main.logScreen form.loginForm button.toggleLogin {
+  border: none;
+  background: none;
+}
+main.logScreen form.loginForm button.toggleSignup span.accent,
+main.logScreen form.loginForm button.toggleLogin span.accent {
+  color: #d83a37;
+}
+main.logScreen button.signAsGuest {
+  order: 2;
+  margin: 50px;
+}
+main.gameScreen aside.leaderBoard {
+  margin-right: 50px;
+}
+main.gameScreen table.game tr {
+  display: block;
+}
+main.gameScreen table.game tr td.card {
+  font-size: 50px;
+  perspective: 1000px;
+  position: relative;
+  height: 200px;
+  width: 150px;
+  display: inline-block;
+  margin: 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+main.gameScreen table.game tr td.card div.front,
+main.gameScreen table.game tr td.card div.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+main.gameScreen table.game tr td.card div.front {
+  transform: rotateY(180deg);
+}
+main.gameScreen table.game tr td.card:not(.hidden) div.back {
+  transform: rotateY(180deg);
+}
+main.gameScreen table.game tr td.card:not(.hidden) div.front {
+  transform: rotateY(360deg);
+}
+main.gameScreen aside.timer {
+  margin-left: 50px;
+  background-color: #fff;
+  width: 20px;
+  height: 600px;
+  position: relative;
+}
+main.gameScreen aside.timer div.time {
+  background: #d83a37;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.2s ease-in-out;
+}
+
+.inputContainer {
+  margin-bottom: 30px;
+  border-radius: 7px;
+  border: 2px solid grey;
+  width: 100%;
+  padding: 5px;
+  padding-top: 15px;
+  position: relative;
+}
+.inputContainer label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 0px 3px;
+}
+.inputContainer input[type=text],
+.inputContainer input[type=email],
+.inputContainer input[type=password],
+.inputContainer input[type=number] {
+  padding: 5px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.1s ease-in-out;
+  background-color: transparent;
+}
+.inputContainer input[type=text]:focus,
+.inputContainer input[type=email]:focus,
+.inputContainer input[type=password]:focus,
+.inputContainer input[type=number]:focus {
+  outline: none;
+  border-bottom: 2px solid #d83a37;
+}
+
+button.primary {
+  background-color: #0ac3a7;
+  border: none;
+  height: 60px;
+  width: 350px;
+  line-height: 60px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 0 0 rgba(0, 128, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+button.primary:hover {
+  box-shadow: 0 0 5px rgba(10, 195, 167, 0.8);
+  transform: scale(1.02);
+}
+
+/*# sourceMappingURL=style.css.map */

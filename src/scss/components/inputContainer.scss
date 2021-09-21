@@ -1,0 +1,34 @@
+.inputContainer {
+  margin-bottom: 30px;
+  border-radius: 7px;
+  border: 2px solid grey;
+  width: 100%;
+  padding: 5px;
+  padding-top: 15px;
+  position: relative;
+  label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0px 3px;
+  }
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='number'] {
+    padding: 5px;
+    height: 40px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.1s ease-in-out;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $red;
+    }
+  }
+}

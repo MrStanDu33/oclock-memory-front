@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: $backgroundColor;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.1s linear;
+}
+
+img[alt=''],
+img:not([alt]) {
+  border: 5px dashed #cc0000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+** 	____                      _
+** |  _ \                    | |
+** | |_) |_ __ __ _ _ __   __| |
+** |  _ <| '__/ _` | '_ \ / _` |
+** | |_) | | | (_| | | | | (_| |
+** |____/|_|  \__,_|_| |_|\__,_|
+*/
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.helper {
+  cursor: help;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.tohide {
+  display: none;
+}
+
+.marginCenter {
+  margin: 0 auto;
+}
+
+.marginLeft {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.marginRight {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
+.flex.noWrap {
+  flex-wrap: nowrap;
+}
+
+.flex.row.xCenter {
+  justify-content: center;
+}
+
+.flex.row.xSpaceBetween {
+  justify-content: space-between;
+}
+
+.flex.row.xSpaceAround {
+  justify-content: space-around;
+}
+
+.flex.row.xSpaceEvenly {
+  justify-content: space-evenly;
+}
+
+.flex.row.yCenter {
+  align-items: center;
+}
+
+.flex.row.yStretch {
+  align-items: stretch;
+}
+
+.flex.row.ySpaceAround {
+  align-items: space-around;
+}
+
+.flex.column.xCenter {
+  align-items: center;
+}
+
+.flex.column.xSpaceBetween {
+  align-items: space-between;
+}
+
+.flex.column.xSpaceAround {
+  align-items: space-around;
+}
+
+.flex.column.yCenter {
+  justify-content: center;
+}
+
+.flex.column.yStretch {
+  justify-content: stretch;
+}
+
+.flex.column.ySpaceBetween {
+  justify-content: space-between;
+}
+
+.flex.column.ySpaceAround {
+  justify-content: space-around;
+}
+
+.flex.column.ySpaceEvenly {
+  justify-content: space-evenly;
+}
+
+.grid {
+  display: grid;
+}
+
+.inline {
+  display: inline-block;
+}
